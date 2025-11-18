@@ -1,0 +1,9 @@
+pandas
+numpy
+pymavlink
+geopandas
+contextily
+matplotlib
+fpdf
+ttkthemes
+pillow
