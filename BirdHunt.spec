@@ -46,9 +46,12 @@ coll = COLLECT(
     upx_exclude=[],
     name='BirdHunt',
 )
-app = BUNDLE(
-    coll,
-    name='BirdHunt.app',
-    icon=None,
-    bundle_identifier=None,
-)
+import sys
+
+if sys.platform == 'darwin':
+    app = BUNDLE(
+        coll,
+        name='BirdHunt.app',
+        icon=None,
+        bundle_identifier=None,
+    )

@@ -14,23 +14,41 @@ BirdHunt is a specialized forensic tool designed for analyzing UAV (Unmanned Aer
 
 ### Prerequisites
 - Python 3.10 or higher
-- macOS (tested on macOS 15.x)
+- **macOS**: Tested on macOS 15.x
+- **Windows**: Windows 10/11
+- **Linux**: Ubuntu 20.04+ (or similar)
 
 ### Setup
+
+#### macOS / Linux
 1.  **Clone the repository:**
     ```bash
     git clone <repository-url>
     cd BirdHunt
     ```
-
 2.  **Create a virtual environment:**
     ```bash
     python3 -m venv venv
     source venv/bin/activate
     ```
-
 3.  **Install dependencies:**
     ```bash
+    pip install -r requirements.txt
+    ```
+
+#### Windows
+1.  **Clone the repository:**
+    ```cmd
+    git clone <repository-url>
+    cd BirdHunt
+    ```
+2.  **Create a virtual environment:**
+    ```cmd
+    python -m venv venv
+    venv\Scripts\activate
+    ```
+3.  **Install dependencies:**
+    ```cmd
     pip install -r requirements.txt
     ```
 
@@ -38,21 +56,48 @@ BirdHunt is a specialized forensic tool designed for analyzing UAV (Unmanned Aer
 
 To run the application directly from the Python source code:
 
+**macOS / Linux:**
 ```bash
 source venv/bin/activate
 python Main.py
 ```
 
+**Windows:**
+```cmd
+venv\Scripts\activate
+python Main.py
+```
+
 ## Building the Application
 
-To package the application as a standalone macOS app (`.app` bundle):
+You can package the application as a standalone executable for your platform.
 
-1.  Ensure you have the virtual environment activated and dependencies installed.
-2.  Run the build script:
+### macOS
+To create a `.app` bundle:
+1.  Ensure `venv` is active.
+2.  Run:
     ```bash
     ./build_app.sh
     ```
-3.  The executable will be located in `dist/BirdHunt.app`.
+3.  The application will be in `dist/BirdHunt.app`.
+
+### Windows
+To create a `.exe` executable:
+1.  Ensure `venv` is active.
+2.  Run:
+    ```cmd
+    build_app.bat
+    ```
+3.  The executable will be in `dist\BirdHunt\BirdHunt.exe`.
+
+### Linux
+To create a binary executable:
+1.  Ensure `venv` is active.
+2.  Run:
+    ```bash
+    ./build_app.sh
+    ```
+3.  The executable will be in `dist/BirdHunt/BirdHunt`.
 
 ## Usage
 

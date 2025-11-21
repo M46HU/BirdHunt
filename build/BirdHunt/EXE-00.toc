@@ -63,7 +63,7 @@
  [],
  False,
  False,
- 1763735512,
+ 1763741136,
  [('run',
    '/Users/matt/Desktop/MattLab/BirdHunt/venv/lib/python3.14/site-packages/PyInstaller/bootloader/Darwin-64bit/run',
    'EXECUTABLE')],
