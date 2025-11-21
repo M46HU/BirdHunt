@@ -7,3 +7,5 @@ matplotlib
 fpdf
 ttkthemes
 pillow
+certifi
+tkintermapview
