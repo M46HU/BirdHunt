@@ -174,7 +174,8 @@ class BirdHuntApp(ThemedTk):
             self.after(0, self.update_gui_with_data)
             
         except Exception as e:
-            self.after(0, lambda: self.show_error(f"Failed to process log: {e}"))
+            error_msg = f"Failed to process log: {e}"
+            self.after(0, self.show_error, error_msg)
 
     def update_gui_with_data(self):
         self.summary_text.set(
@@ -290,7 +291,9 @@ class BirdHuntApp(ThemedTk):
             )
             self.after(0, lambda: self.status_label.config(text="PDF Exported Successfully."))
         except Exception as e:
-            self.after(0, lambda: self.show_error(f"Failed to export PDF: {e}"))
+            error_msg = f"Failed to export PDF: {e}"
+            self.after(0, self.status_label.config, {"text": error_msg})
+            self.after(0, self.show_error, error_msg)
 
     def show_error(self, message):
         print(f"ERROR: {message}")
